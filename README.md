@@ -29,4 +29,4 @@ Publish the `main` branch from the `/docs` directory in Repository Settings → 
 
 ## Deployment status
 
-The GitHub repository and Pages URL must be created under the confirmed GitHub account with an authorized token. Do not substitute a different owner merely because it is the account currently authenticated in this environment.
+Publishing to `mrpliberty/tip-your-customer` was authorized, but the available GitHub personal access token cannot create repositories (GitHub returns HTTP 403). The repository and Pages URL have not yet been created. Deployment requires a credential for `mrpliberty` with repository creation, Contents write, and Pages administration permissions, or an existing repository with those permissions granted. Once access is available, publish `main` and enable Pages from `/docs` as described above.
