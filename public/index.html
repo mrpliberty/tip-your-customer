@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="A simple way to send a thank-you tip with Cash App or Bitcoin Lightning.">
+  <title>Tip Your Customer — A little thanks goes a long way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./qr.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">✳</span><span>tip<span class="brand-accent">your</span>customer<span class="brand-dot">.</span></span></div>
+    <span class="header-tag">A better way to say thanks <span aria-hidden="true">↗</span></span>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> THE GOOD KIND OF TRANSACTION</div>
+        <h1 id="page-title">Great people deserve <em>great tips.</em></h1>
+        <p class="hero-description">Make someone’s day. Choose an amount, pick how you’d like to send it, and share the appreciation in a scan.</p>
+        <div class="hero-footnote"><span class="little-star" aria-hidden="true">✳</span> From your business, straight to the people who make it happen.</div>
+      </div>
+      <div class="form-shell">
+        <div class="form-head"><div><span class="step-label">01 / CREATE A TIP</span><h2>Let’s make it happen.</h2></div><span class="form-spark" aria-hidden="true">✴</span></div>
+        <form id="tip-form" novalidate>
+          <label for="amount" class="field-label">Tip amount <span>USD</span></label>
+          <div class="amount-wrap"><span aria-hidden="true">$</span><input id="amount" name="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="25.00" required aria-describedby="amount-hint"></div>
+          <p id="amount-hint" class="field-hint">A little or a lot — every bit counts.</p>
+          <fieldset><legend class="field-label">Payment method</legend><div class="method-grid">
+            <label class="method-card"><input type="radio" name="method" value="cash" checked><span class="method-content"><span class="method-icon cash-icon" aria-hidden="true">$</span><span><strong>Cash App</strong><small>Send to a $cashtag</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
+            <label class="method-card"><input type="radio" name="method" value="lightning"><span class="method-content"><span class="method-icon lightning-icon" aria-hidden="true">ϟ</span><span><strong>Lightning</strong><small>Instant Bitcoin tips</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
+          </div></fieldset>
+          <label for="handle" id="handle-label" class="field-label">Customer’s $cashtag</label>
+          <input id="handle" name="handle" class="handle-input" type="text" autocomplete="off" placeholder="$customer" required aria-describedby="handle-hint">
+          <p id="handle-hint" class="field-hint">The customer receives the tip at this Cash App profile.</p>
+          <p id="error" role="alert" class="error" hidden></p>
+          <button id="generate" type="submit" class="generate">Generate payment QR <span aria-hidden="true">↗</span></button>
+          <p class="privacy-note"><span aria-hidden="true">◇</span> No sign-up. No custody. We never handle the payment.</p>
+        </form>
+      </div>
+    </section>
+    <section id="result" class="result" aria-live="polite" hidden></section>
+    <section class="how-it-works" aria-labelledby="how-title">
+      <div><span class="step-label">SIMPLE BY DESIGN</span><h2 id="how-title">Three steps. One thoughtful gesture.</h2></div>
+      <div class="steps"><article><span>01</span><h3>Set your tip</h3><p>Enter the USD amount you want to send.</p></article><article><span>02</span><h3>Choose a way</h3><p>Pick Cash App or a Lightning address.</p></article><article><span>03</span><h3>Scan & send</h3><p>Check the recipient and amount in your payment app before confirming.</p></article></div>
+    </section>
+  </main>
+  <footer><span>Made for the moments that matter. <span aria-hidden="true">✳</span></span><span>Tip Your Customer · Payments are completed in your own wallet or app.</span></footer>
+</body>
+</html>
