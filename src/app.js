@@ -89,7 +89,10 @@ form.addEventListener('submit', async event => {
         rate = await fetchRate();
         msats = centsToMillisats(cents, rate);
         invoice = await requestInvoice(address, msats);
-      } catch (cause) { failure = cause; }
+      } catch (cause) {
+        if (/outside this recipient’s Lightning limits|invoice amount does not match/.test(cause.message)) throw cause;
+        failure = cause;
+      }
       if (current !== generation) return;
       if (invoice) {
         await showResult({ title: 'Pay with Lightning', subtitle: `Invoice for ${address.address}`, payload: `lightning:${invoice}`, amount,
