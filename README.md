@@ -29,4 +29,4 @@ Publish the `main` branch from the `/docs` directory in Repository Settings → 
 
 ## Deployment status
 
-Publishing to `mrpliberty/tip-your-customer` was authorized, but the available GitHub personal access token cannot create repositories (GitHub returns HTTP 403). The repository and Pages URL have not yet been created. Deployment requires a credential for `mrpliberty` with repository creation, Contents write, and Pages administration permissions, or an existing repository with those permissions granted. Once access is available, publish `main` and enable Pages from `/docs` as described above.
+Published at https://mrpliberty.github.io/tip-your-customer/ from the public repository https://github.com/mrpliberty/tip-your-customer. The site is hosted by GitHub Pages; the source and built `docs/` assets are on `main`.
